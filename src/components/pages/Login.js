@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import useInput from '../hooks/use-input';
+import useInput from '../../hooks/use-input';
+import logo from './logo.svg';
 
 const Login = () => {
     const [formIsValid, setFormIsValid] = useState(false);
