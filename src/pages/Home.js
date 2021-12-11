@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from '../components/Header'
 import MainContent from '../components/MainContent'
+import classes from './Home.module.css'
 
 const Home = () => {
     return (
-        <div>
+        <div className={classes.home}>
             <Header />
-            <h1>Home</h1>
+            <MainContent />
         </div>
     )
 }

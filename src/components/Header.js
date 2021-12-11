@@ -5,9 +5,8 @@ import menu from '../assets/icons/menu.svg';
 import close from '../assets/icons/cross.svg';
 import classes from './Header.module.css';
 import { NavLink, Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
 
-import { Container } from './UI/Container';
+import { NavContainer } from './UI/NavContainer';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +18,7 @@ const Header = () => {
 
     return (
         <header className={classes.header}>
-            <Container >
+            <NavContainer >
                 <Link to='/' className={classes.logo}>
                     <img src={logo} alt="logo" className={classes.desktop} />
                     <img src={logosm} alt="logo" className={classes.mobile} />
@@ -52,7 +51,7 @@ const Header = () => {
                     </div>
                 </nav>
 
-            </Container>
+            </NavContainer>
         </header>
     )
 }
