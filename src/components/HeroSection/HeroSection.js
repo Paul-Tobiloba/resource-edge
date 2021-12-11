@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container } from './UI/Container';
-import hero from '../assets/images/hero_Relax.png';
+import { Container } from '../UI/Container/Container';
+import hero from '../../assets/images/hero_Relax.png';
 import classes from './HeroSection.module.css';
 
 const HeroSection = () => {

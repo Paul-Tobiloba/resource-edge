@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import logo from '../assets/images/logo-full.svg';
-import logosm from '../assets/images/logo.svg';
-import menu from '../assets/icons/menu.svg';
-import close from '../assets/icons/cross.svg';
+import React, { useState } from 'react';
+import logo from '../../assets/images/logo-full.svg';
+import logosm from '../../assets/images/logo.svg';
+import menu from '../../assets/icons/menu.svg';
+import close from '../../assets/icons/cross.svg';
 import classes from './Header.module.css';
 import { NavLink, Link } from 'react-router-dom';
 
-import { NavContainer } from './UI/NavContainer';
+import { NavContainer } from '../UI/Container/NavContainer';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
