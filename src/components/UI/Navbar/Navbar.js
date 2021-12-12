@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import logo from '../../assets/images/logo-full.svg';
-import logosm from '../../assets/images/logo.svg';
-import menu from '../../assets/icons/menu.svg';
-import close from '../../assets/icons/cross.svg';
+import { FaBars } from 'react-icons/fa';
+import logo from '../../../assets/images/logo-full.svg';
+import logosm from '../../../assets/images/logo.svg';
+import avatar from '../../../assets/images/avatar.png';
+import close from '../../../assets/icons/cross.svg';
 import classes from './Navbar.module.css';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,42 +14,30 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     }
 
-    const icon = isOpen ? close : menu;
+    const icon = isOpen ? close : avatar;
 
     return (
-        <header className={classes.header}>
+        <nav className={classes.navbar}>
             <div className={classes.nav_container} >
-                <div className={classes.burger} onClick={toggleMenu}>
-                    <img src={icon} alt="menu" />
-                </div>
-                <Link to='/' className={classes.logo}>
-                    <img src={logo} alt="logo" className={classes.desktop} />
-                    <img src={logosm} alt="logo" className={classes.mobile} />
-                </Link>
-
-                <nav className={classes.navbar}>
-                    <ul className={classes.navbarList}>
-                        <li className={classes.navbarItem}>
-                            <NavLink to='/features'>
-                                Features
-                            </NavLink>
-                        </li>
-                        <li className={classes.navbarItem}>
-                            <NavLink to='/about'>
-                                About
-                            </NavLink>
-                        </li>
-                    </ul>
-                    <div className={classes.navBtn}>
-                        <button className={classes.navBtnLink} disabled>Sign up</button>
-                        <button className={classes.navBtnLink}>
-                            <Link to='/login'>Sign in</Link>
-                        </button>
+                <div className={classes.nav_left}>
+                    <div className={classes.burger} >
+                        <FaBars />
                     </div>
-                </nav>
+                    <Link to='/' className={classes.logo}>
+                        <img src={logo} alt="resource edge logo" className={classes.desktop} />
+                        <img src={logosm} alt="resource edge logo" className={classes.mobile} />
+                    </Link>
+                    <div className={classes.nav_vr}></div>
+                    <div className={classes.role}>
+                        <p>TM Dashboard</p>
+                    </div>
+                </div>
 
+                <div className={classes.nav_right}>
+                    <img src={icon} alt="avatar" className={classes.avatar} onClick={toggleMenu} />
+                </div>
             </div>
-        </header>
+        </nav>
     )
 }
 
