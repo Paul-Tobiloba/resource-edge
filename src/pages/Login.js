@@ -1,54 +1,26 @@
-// import React, { useState } from 'react';
-// import useInput from '../hooks/use-input';
-// // import logo from '../../assets/images/logo.png';
+import React from 'react';
+import { LoginCard } from '../components/UI/LoginCard/LoginCard';
+import { LoginForm } from '../components/LoginForm/LoginForm';
+import logo from '../assets/images/logo.png';
+import classes from './Login.module.css';
 
-// const Login = () => {
-//     const [formIsValid, setFormIsValid] = useState(false);
-//     const {
-//         value: email,
-//         hasError: emailHasError,
-//         isValid: emailIsValid,
-//         valueChangeHandler: emailChangeHandler,
-//         inputBlurHandler: emailBlurHandler,
-//         reset: emailReset
-//     } = useInput(value => value.includes('@'), 'Email is invalid');
+const Login = () => {
 
-//     const {
-//         value: password,
-//         hasError: passwordHasError,
-//         isValid: passwordIsValid,
-//         valueChangeHandler: passwordChangeHandler,
-//         inputBlurHandler: passwordBlurHandler,
-//         reset: passwordReset
-//     } = useInput(value => value.length > 5, 'Password is too short');
+    return (
+        <div className={classes.bg}>
+            <div className={classes.container}>
+                <div className={classes.logo}>
+                    <img src={logo} alt="logo" />
+                </div>
+                <div className={classes.form}>
+                    <LoginCard>
+                        <LoginForm />
+                    </LoginCard>
+                    
+                </div>
+            </div>
+        </div>
+    )
+}
 
-//     if (emailIsValid && passwordIsValid) {
-//         setFormIsValid(true);
-//     }
-
-//     const formSubmissionHandler = (event) => {
-//         event.preventDefault();
-
-//         if (!formIsValid) {
-//             return;
-//         }
-
-//         console.log(email)
-
-//         emailReset();
-//         passwordReset();
-//     }
-
-//     const emailInputClasses = emailHasError ? 'form-control invalid' : 'form-control';
-//     const passwordInputClasses = passwordHasError ? 'form-control invalid' : 'form-control';
-
-//     return (
-//         <div>
-//             <form >
-
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default Login
+export default Login

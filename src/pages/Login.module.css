@@ -1,0 +1,49 @@
+.bg {
+    height: 100vh;
+    background: #E5E5E5;
+    background-image: url("../assets/images/Img\ 43.png"), url("../assets/images/Img\ 45.png");
+    background-position: bottom left, bottom right;
+    background-size: auto, auto;
+    background-repeat: no-repeat;
+    padding-top: 4em;
+}
+
+.container {
+    width: 33.33%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 90%;
+    text-align: center;
+    margin: 1em auto;
+
+}
+
+.logo img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .bg {
+        background-image: none;
+    }
+
+    .container {
+        width: 70%;
+    }
+
+    .logo {
+        width: 60%
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 80%;
+    }
+
+    .logo {
+        width: 80%;
+    }
+}
