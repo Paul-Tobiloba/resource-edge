@@ -7,8 +7,8 @@ import classes from './AdminFinPartners.module.css';
 export const AdminFinPartners = () => {
     return (
         <div className={classes.alfp_section}>
-            <AdminLogistics/>
-            <Finance/>
+            <AdminLogistics />
+            <Finance />
             <Partners />
         </div>
     )

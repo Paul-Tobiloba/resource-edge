@@ -1,7 +1,6 @@
 import React from 'react'
 import classes from './HrSection.module.css';
-// import { Container } from '../UI/Container/Container';
-import { Card } from '../UI/Card/Card';
+import { ShadowedCard } from '../UI/Card/ShadowedCard';
 import icon1 from '../../assets/images/hr_management.svg';
 import icon2 from '../../assets/images/Logistics.svg';
 import icon3 from '../../assets/images/paid_off.svg';
@@ -20,19 +19,19 @@ const HrSection = (props) => {
                     </p>
                 </div>
                 <div className={classes.hr_content__details}>
-                    <Card className={classes.hr_content__card}
+                    <ShadowedCard className={classes.hr_content__card}
                         title="Employee Management"
                         description="From Hiring & Onboarding to Retiring, the Resource Edge Employee Management module  eliminates all the complexities & paperwork involved in managing your team."
                         icon={icon1}
                     />
-                    <Card className={classes.hr_content__card}
-                        title="Employee Management"
-                        description="From Hiring & Onboarding to Retiring, the Resource Edge Employee Management module  eliminates all the complexities & paperwork involved in managing your team."
+                    <ShadowedCard className={classes.hr_content__card}
+                        title="Performance Management"
+                        description="Manage and track employee performance with our easy-to-use tools for goal setting, performance agreements and performance reviews."
                         icon={icon2}
                     />
-                    <Card className={classes.hr_content__card}
-                        title="Employee Management"
-                        description="From Hiring & Onboarding to Retiring, the Resource Edge Employee Management module  eliminates all the complexities & paperwork involved in managing your team."
+                    <ShadowedCard className={classes.hr_content__card}
+                        title="Paid time off"
+                        description="Employees can request for paid time off, vacations, sick leaves or educational leaves and get approvals all within Resource Edge. HR managers can equally ensure compliance."
                         icon={icon3}
                     />
                 </div>

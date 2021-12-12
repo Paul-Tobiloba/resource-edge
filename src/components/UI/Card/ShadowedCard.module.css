@@ -1,0 +1,35 @@
+.card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 18px 31px 0 rgba(9, 30, 66, 0.06);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 359px;
+    min-height: 289px;
+    height: fit-content;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 18px 31px 0 rgba(9, 30, 66, 0.1);
+    transform: translateY(-5px);
+}
+
+.card__title {
+    font-size: 1.5rem;
+}
+
+.card__text {
+    font-size: .9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 342px;
+    }
+
+    .card__title {
+        font-size: 1.2rem;
+    }
+}

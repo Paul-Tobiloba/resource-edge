@@ -15,12 +15,12 @@
 }
 
 .hr_content__text {
-    width: 60%;
+    width: 50%;
     margin-bottom: 20px;
 }
 
 .hr_content__title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -42,6 +42,12 @@
 
 .hr_content__snapshot img {
     width: 100%;
+    transition: all 0.5s ease;
+}
+
+.hr_content__snapshot img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
