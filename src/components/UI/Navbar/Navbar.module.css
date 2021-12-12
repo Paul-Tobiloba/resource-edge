@@ -1,0 +1,126 @@
+.header {
+    margin: 0 auto;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.header a {
+    color: #000;
+    text-decoration: none;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+    color: rgba(0, 82, 204, 1);
+
+}
+
+.logo .mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .logo .desktop {
+        display: none;
+    }
+
+    .logo .mobile {
+        display: block;
+    }
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+}
+
+.navbarItem {
+    display: inline-block;
+    margin-left: 1rem;
+    color: #333;
+    height: 100%;
+    padding: 0 1rem;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navBtn {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navBtn {
+        display: none;
+    }
+}
+
+.navBtnLink {
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    background-color: rgba(0, 82, 204, 1);
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-size: .8rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.navBtnLink:hover {
+    background-color: #fff;
+    color: rgba(0, 82, 204, 0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+.navBtnLink:disabled {
+    background-color: #F4F5F7;
+    color: #A5ADBA;
+    cursor: not-allowed;
+    font-size: .8rem;
+}
+
+.navBtnLink a {
+    color: #fff !important;
+}
+
+.navBtnLink:hover a {
+    color: rgba(0, 82, 204, 1) !important;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(-30%, 70%);
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}
