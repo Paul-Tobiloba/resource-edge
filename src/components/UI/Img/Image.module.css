@@ -1,0 +1,10 @@
+.image_container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+}
