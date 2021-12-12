@@ -4,7 +4,7 @@ export const DashboardMain = (props) => {
     return (
         <main>
             <div className={classes.main_text}>
-                <h1>Hello, {props.username}</h1>
+                <h1>Hello, Ositadinma Nwangwu</h1>
                 <p>Welcome and Good to have you back.</p>
             </div>
             <div className={classes.main_taskList}>
