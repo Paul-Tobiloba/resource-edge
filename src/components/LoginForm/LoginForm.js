@@ -48,7 +48,7 @@ export const LoginForm = () => {
         setTimeout(() => {
             setFormIsValid(true);
             if (isLogin) {
-                authCtx.login();
+                authCtx.login(enteredEmail, enteredPassword);
             }
             history.push('/dashboard');
             setFormIsLoading(false);
