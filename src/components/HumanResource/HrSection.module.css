@@ -58,4 +58,9 @@
     .hr_content {
         width: 95%;
     }
+
+    .hr_content__details {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
