@@ -21,7 +21,7 @@ const Navbar = () => {
             document.addEventListener('click', toggleMenu);
         });
     }
-    
+
 
     const logoutHandler = () => {
         AuthCtx.logout(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
 
     const activeHandler = () => {
         setIsActive(!isActive);
-        
+
         if (isActive) {
             setIsTM("TM Dashboard");
         } else {
@@ -65,39 +65,43 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-            {isOpen && <div className={classes.menu}>
-                <div className={classes.menu_container}>
-                    <div className={classes.menu_header}>
-                        <p className={classes.menu_header_user}>
-                            Ositadinma Nwangwu
-                        </p>
-                        <h5 className={classes.menu_header_text}>Profile</h5>
-                    </div>
-                    <div className={classes.menu_body}>
-                        <p className={classes.menu_body_text}>Use Resource Edge as </p>
-                        <div
-                            onClick={activeHandler}
-                            className={classes.menu_item} >
-                            <img src={TM_avatar} alt="TM-avatar" className={classes.avatar} />
-                            <p>Talent Manager</p>
-                            {!isActive && <div className={classes.active}><FaCheck /></div>}
+            
+                {isOpen && 
+                <span className={classes.menu_bg} onClick={toggleMenu}>
+                <span className={classes.menu}>
+                    <div className={classes.menu_container}>
+                        <div className={classes.menu_header}>
+                            <p className={classes.menu_header_user}>
+                                Ositadinma Nwangwu
+                            </p>
+                            <h5 className={classes.menu_header_text}>Profile</h5>
                         </div>
-                        <div className={classes.menu_item}  onClick={activeHandler}>
-                            <img src={E_avatar} alt="Employee-avatar" className={classes.avatar} />
-                            <p>Employee</p>
-                            {isActive && <div className={classes.active}><FaCheck /></div>}
+                        <div className={classes.menu_body}>
+                            <p className={classes.menu_body_text}>Use Resource Edge as </p>
+                            <div
+                                onClick={activeHandler}
+                                className={classes.menu_item} >
+                                <img src={TM_avatar} alt="TM-avatar" className={classes.avatar} />
+                                <p>Talent Manager</p>
+                                {!isActive && <div className={classes.active}><FaCheck /></div>}
+                            </div>
+                            <div className={classes.menu_item} onClick={activeHandler}>
+                                <img src={E_avatar} alt="Employee-avatar" className={classes.avatar} />
+                                <p>Employee</p>
+                                {isActive && <div className={classes.active}><FaCheck /></div>}
+                            </div>
+                        </div>
+                        <hr className={classes.menu_hr} />
+                        <div className={classes.menu_footer} onClick={toggleMenu}>
+                            <Link to='/'
+                                onClick={logoutHandler}
+                                className={classes.menu_link}>
+                                <p>Logout</p>
+                            </Link>
                         </div>
                     </div>
-                    <hr className={classes.menu_hr} />
-                    <div className={classes.menu_footer} onClick={toggleMenu}>
-                        <Link to='/'
-                            onClick={logoutHandler}
-                            className={classes.menu_link}>
-                            <p>Logout</p>
-                        </Link>
-                    </div>
-                </div>
-            </div>}
+                    </span>
+                </span>}
         </React.Fragment>
     )
 }
