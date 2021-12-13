@@ -46,13 +46,14 @@ export const LoginForm = () => {
         const enteredPassword = password;
         setFormIsLoading(true);
         setTimeout(() => {
-            setFormIsLoading(false);
             setFormIsValid(true);
             if (isLogin) {
-                authCtx.login(enteredEmail, enteredPassword);
+                authCtx.login();
             }
             history.push('/dashboard');
+            setFormIsLoading(false);
         }, 3000);
+        authCtx.isLoggedIn = true;
         emailReset();
         passwordReset();
     }

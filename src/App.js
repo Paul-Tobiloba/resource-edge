@@ -16,17 +16,16 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        {!authCtx.isLoggedIn &&
+    
           <Route path="/login">
             <Login />
           </Route>
-        }
+
         <Route path="/forgot-password">
           <ForgotPassword />
         </Route>
         <Route path="/dashboard">
-          {authCtx.isLoggedIn && <Dashboard />}
-          {!authCtx.isLoggedIn && <Redirect to='/login' />}
+          <Dashboard />
         </Route>
         <Route path="*">
           <Redirect to='/' />
