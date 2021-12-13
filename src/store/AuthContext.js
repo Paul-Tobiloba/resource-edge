@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 const AuthContext = React.createContext({
     isLoggedIn: false,
-    login: () => {},
-    logout: () => {},
+    login: () => { },
+    logout: () => { },
     password: '',
-    changePassword: () => {}
+    changePassword: () => { }
 })
 
 export const AuthContextProvider = (props) => {
@@ -15,6 +15,7 @@ export const AuthContextProvider = (props) => {
     const loginHandler = () => {
         setIsLoggedIn(true)
         setPassword(props.password)
+        localStorage.setItem('isLoggedIn', true);
     }
 
     const changePasswordHandler = (newPassword) => {
@@ -25,7 +26,7 @@ export const AuthContextProvider = (props) => {
         setIsLoggedIn(false)
     }
 
-    
+
     const contextValue = {
         isLoggedIn,
         login: loginHandler,
