@@ -4,9 +4,11 @@ import {DashboardMain} from '../components/DashboardMain/DashboardMain'
 import classes from './Dashboard.module.css';
 
 const Dashboard = () => {
+
+
     return (
         <div className={classes.dashboard}>
-            <Navbar />
+            <Navbar  />
             <DashboardMain />
         </div>
     )
