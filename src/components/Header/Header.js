@@ -8,26 +8,26 @@ import { NavLink, Link } from 'react-router-dom';
 
 import { NavContainer } from '../UI/Container/NavContainer';
 const Header = () => {
+    
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen, () => {
+            document.addEventListener('click', toggleMenu);
+        });
     }
 
     const icon = isOpen ? close : menu;
 
     return (
+        <React.Fragment>
         <header className={classes.header}>
             <NavContainer >
                 <Link to='/' className={classes.logo}>
                     <img src={logo} alt="logo" className={classes.desktop} />
                     <img src={logosm} alt="logo" className={classes.mobile} />
                 </Link>
-                <div className={classes.burger} onClick={
-                    () => {
-                        toggleMenu();
-                    }
-                }>
+                <div className={classes.burger} onClick={toggleMenu}>
                     <img src={icon} alt="menu" />
                 </div>
                 <nav className={classes.navbar}>
@@ -50,9 +50,33 @@ const Header = () => {
                         </button>
                     </div>
                 </nav>
-
             </NavContainer>
+            {isOpen && 
+                <span className={classes.menu_bg} onClick={toggleMenu}>
+                <span className={classes.menu}>
+                    <div className={classes.menu_container}>
+                        <div className={classes.menu_body}>
+                            <div className={classes.menu_item}>
+                                <p>Features</p>
+                            </div>
+                            <div className={classes.menu_item}>
+                                <p>About</p>
+                            </div>
+                        </div>
+                        <div className={classes.menu_footer} onClick={toggleMenu}>
+                            <Link to='/login' className={classes.menu_link} onClick={toggleMenu}>
+                                <p>Log In</p>
+                            </Link>
+                            <Link to='' className={classes.menu_link}>
+                                <p>Sign Up</p>
+                            </Link>
+                        </div>
+                    </div>
+                    </span>
+                </span>}
         </header>
+        <span className={classes.menu_bg} onClick={toggleMenu}></span>
+        </React.Fragment>
     )
 }
 
