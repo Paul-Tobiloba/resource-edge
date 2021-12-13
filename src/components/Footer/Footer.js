@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from '../UI/Container/Container';
 import { Image } from '../UI/Img/Image';
-import logo from '../../assets/images/Genesys_logo.png';
+import logo from '../../assets/images/RE_Logo.png';
 import classes from './Footer.module.css'
 import { Link } from 'react-router-dom';
 import facebook from '../../assets/icons/facebook.svg';
